@@ -1,15 +1,16 @@
 const namhaePageScraper = require('./namhaePageScraper');
 const daeyuPageScraper = require('./daeyuPageScraper');
 const nongsaroPageScraper = require('./nongsaroPageScraper');
+const plantixPageScraper = require('./plantixPageScraper');
 
-async function scrapeAll(browserInstance){
+async function scrapeAll(browserInstance) {
 	let browser;
-	try{
+	try {
 		browser = await browserInstance;
-		await nongsaroPageScraper.scraper(browser);	
-		
+		await plantixPageScraper.scraper(browser);
+
 	}
-	catch(err){
+	catch (err) {
 		console.log("Could not resolve the browser instance => ", err);
 	}
 }
